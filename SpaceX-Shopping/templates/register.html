@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock title %}
+{% load static %}
+{% block link %}"{% static 'styles-login.css' %}"{% endblock link %}
+{% block body%}
+
+
+    <div style="text-align: center; margin-top: 100px;">
+        {% for message in messages  %}
+        <h5>{{message.message}} <a href="./login" style="color: black;">Log IN</a></h5>
+        {% endfor %}
+    </div>
+    <div id="login" style="padding-top: 0px;">
+        <h3>REGISTER</h3><br>
+        <p>Please fill in the information below:</p><br>
+    </div>
+    <div id="form">
+        <form action="/register" method="post">
+            {% csrf_token %}
+            
+            <input type="text"  placeholder="First name" name="fname"><br><br>
+            <input type="text"  placeholder="Last name" name="lname"><br><br>
+            <input type="text"  placeholder="Email" name="email"><br><br>
+            <input type="text"  placeholder="Password" name="password"><br><br>
+                      
+            <button id="button" class="text" type="submit" >CREATE MY ACCOUNT</button>   
+        </form><br>
+    </div>
+    <div id="end">
+        <p>Already Registered? <a href="./login">Log IN</a></p>
+    </div>
+    
+    
+    
+    
+    
+{% endblock body %}

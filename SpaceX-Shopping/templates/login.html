@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %}Login{% endblock title %}
+{% load static %}
+{% block link %}"{% static 'styles-login.css' %}"{% endblock link %}
+{% block body%}
+
+    {% for message in messages  %}
+    <h4 style="text-align: center;">{{message.message}}</h4>
+    {% endfor %}
+
+    <div id="login">
+        <h3>LOGIN</h3><br>
+        <p>Please enter your e-mail and password:</p><br>
+    </div>
+    <div id="form">
+        <form action="/login" method="post">
+            {% csrf_token %}
+            
+            <input type="text"  placeholder="Email ID" name="email"><br><br>
+            <div id="forgot">
+            <a href="">Forgot password?</a>
+            <input type="text"  placeholder="Password" name="password"><br><br>
+            
+            </div>            
+            <button id="button" class="text" type="submit" >Log IN</button>
+        </form><br>
+    </div>
+    
+    <style>
+        #forgot{
+            position: relative;
+        }
+        #forgot a{
+            position: absolute;
+            margin-top: 11px;
+            margin-left: 290px;
+            color: #616265;
+            font-weight: 300;
+            text-decoration: none;
+        }
+    </style>
+    <div id="end">
+        <p>Don't have an account? <a href="./register">Create One</a></p>
+    </div>
+    {% for message in messages  %}
+        <h5>{{message.message}} </h5>
+    {% endfor %}
+    
+    
+{% endblock body %}

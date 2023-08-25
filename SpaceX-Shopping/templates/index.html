@@ -1,0 +1,167 @@
+
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% load static %}
+{% block link %}"{% static 'styles-index.css' %}"{% endblock link %}
+{% block body%}
+
+
+    <div>
+        <img id="img1" src="{% static '01.jpg' %}" alt="01jpg">
+    </div>
+    <div id="hdr">
+        <h4>FEATURED PRODUCTS</h4>
+    </div>
+
+
+
+    <!--CARD-->
+
+
+    <div class="row row-cols-1 row-cols-md-2 g-4" style="width: 1530px;">
+        <div class="col" id="card1">
+        <div class="card "  id="thumbnail">
+            <div>
+                <span>PRE-SALE</span>
+            </div>
+            <div class="picture1" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '022.png' %}" alt="...">
+            </div>
+            <div class="picture2" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '02.png' %}" alt="">
+            </div>
+            <style>
+                #thumbnail{
+                    position: relative;
+                }
+                #thumbnail span{
+                    position: absolute;
+                    background-color: white;
+                    box-sizing: border-box;
+                    color: black;
+                    margin-top: 7px;
+                    margin-left: 7px;
+                    font-size: small;
+                    font-weight: 600;
+                    padding: 3px;
+                }
+
+            </style>
+        </div>
+        </div>
+        <div class="col" id="card2">
+        <div class="card "  id="thumbnail">
+            <div class="picture1" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '03.png' %}" alt="...">
+            </div>
+            <div class="picture2" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '033.png' %}" alt="">
+            </div>
+        </div>
+        </div>
+        <div id="img-text">
+        <p >STARSHIP TORCH PRE-SALE</p>
+        <p style="margin-bottom: 25px;">$175.00</p>
+        </div>
+        <div id="img-text">
+        <p >SPACEX STARSHIP STACK METAL ART PRINT</p>
+        <p  style="margin-bottom: 25px;">$499.00</p>
+        </div>
+
+        <div class="col" id="card1">
+        <div class="card "  id="thumbnail">
+            <div class="picture1" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '044.png' %}" alt="...">
+            </div>
+            <div class="picture2" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '04.png' %}" alt="">
+            </div>
+        </div>
+        </div>
+        <div class="col" id="card2">
+        <div class="card "  id="thumbnail">
+            <div class="picture1" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '055.png' %}" alt="...">
+            </div>
+            <div class="picture2" id="pic1">
+            <img id="img2" class="img-responsive" src="{% static '05.png' %}" alt="">
+            </div>
+        </div>
+        </div>
+        <div id="img-text">
+        <p >UNISEX STARSHIP HEATSHIELD PULLOVER HOODIE</p>
+        <p >$65.00</p>
+        </div>
+        <div id="img-text">
+        <p >MEN'S STARSHIP TEST FLIGHT T-SHIRT</p>
+        <p >$30.00</p>
+        </div>
+    </div>
+
+    <!--BUTTON-->
+    <div class="outer">
+        <div class="button">
+        <div class="text">VIEW ALL FEATURED</div>
+        </div>
+    </div>
+
+    <!--card-->
+    <div class="card-group" style="overflow: hidden" id="cardo">
+        <div class="card cardend">
+          <div class="card-overlay" id="c1">
+            <span ><h2>Women's</h2> VIEW PRODUCT</span>
+          </div>
+          <img class="card-img-top" src="{% static 't1.png' %}" alt="Card image cap">
+        </div>
+        <div class="card cardend">
+          <div class="card-overlay" id="c1">
+            <span><h2>Men's</h2> VIEW PRODUCT</span>
+          </div>
+          <img class="card-img-top" src="{% static 't2.png' %}" alt="Card image cap">
+        </div>
+        <div class="card cardend">
+          <div class="card-overlay" id="c1">
+            <span><h2>Accessories</h2> VIEW PRODUCT</span>
+          </div>
+          <img class="card-img-top" src="{% static 't3.png' %}" alt="Card image cap">
+        </div>
+      </div>
+      
+      <style>
+        .cardend {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .card-overlay {
+            text-align: center;
+            position: absolute;
+            padding: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-top: 420px;
+            margin-left: 80px;
+            background-color: white;
+            z-index: 1;
+        }
+        
+        .card-img-top {
+            transition: transform 0.30000s ;
+        }
+        
+        .card-img-top:hover {
+          transform: scale(1.1);
+          transition: 2s;
+        }
+      </style>
+      
+      
+      
+      
+      
+      
+
+
+   
+
+{% endblock body %}

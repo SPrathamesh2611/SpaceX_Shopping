@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% block title %}MEN'S SHIRTS{% endblock title %}
+{% load static %}
+{% block script %}"{% static 'script.js' %}"{% endblock script %}
+{% block body%}
+    <h1 style="text-align: center;padding: 35px;">MEN'S SHIRTS</h1>
+
+    <div class="card-group" style="padding-right: 30px;padding-left: 30px;">
+        <div class="card" style="margin: 10px; border: none;">
+            <a href="./shirt1">
+                <img class="card-img-top" src="{% static 'mens_shirt/shirt 1.webp' %}" alt="Card image cap" >
+            </a>
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">UNISEX RAPTOR SCHEMATIC T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <i class="fa fa-circle" aria-hidden="true" style='color: #8d8362' ></i>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <a href="./shirt2">
+            <img class="card-img-top" src="{% static 'mens_shirt/shirt 2.webp' %}" alt="Card image cap">
+          </a>
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">UNISEX STARSHIP SCHEMATIC T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <i class="fa fa-circle" aria-hidden="true" style='color: #36454f '></i>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="/static/mens_shirt/shirt 3.webp" alt="Card image cap" id="a1">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S SPACEX T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <ul style="padding-left: 0px;" >
+                <li style="display: inline;" onclick="shirt3()"><i class="fa fa-circle" aria-hidden="true" style='color: #808080'></i></li>
+                <li style="display: inline;" onclick="shirt33()"><i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i></li>
+                <li style="display: inline;" onclick="shirt333()"><i class="fa fa-circle" aria-hidden="true" style='color: #000080'></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+            <img class="card-img-top" src="{% static 'mens_shirt/shirt 4.webp' %}" alt="Card image cap">
+            <div class="card-body" style="text-align: center;">
+              <h6 class="card-title">MEN'S OCCUPY MARS T-SHIRT</h6>
+              <h6>$30.00</h6>
+              <i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group" style="padding-right: 30px;padding-left: 30px;">
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="/static/mens_shirt/shirt 5.webp" alt="Card image cap" id="a2">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S FALCON 1 T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <ul style="padding-left: 0px;" >
+                <li style="display: inline;" onclick="shirt5()"><i class="fa fa-circle" aria-hidden="true" style='color: #808080'></i></li>
+                <li style="display: inline;" onclick="shirt55()"><i class="fa fa-circle" aria-hidden="true" style='color:#8d8362'></i></li>
+                <li style="display: inline;" onclick="shirt555()"><i class="fa fa-circle" aria-hidden="true" style='color: #36454f'></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="/static/mens_shirt/shirt 6.webp" alt="Card image cap" id="a3">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S CREW DRAGON SCHEMATIC T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <ul style="padding-left: 0px;" >
+                <li style="display: inline;" onclick="shirt6()"><i class="fa fa-circle" aria-hidden="true" style='color: #36454f'></i></li>
+                <li style="display: inline;" onclick="shirt66()"><i class="fa fa-circle" aria-hidden="true" style='color:#808080'></i></li>
+                <li style="display: inline;" onclick="shirt666()"><i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="{% static 'mens_shirt/shirt 7.webp' %}" alt="Card image cap">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S STARMAN T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+            <img class="card-img-top" src="/static/mens_shirt/shirt 8.webp" alt="Card image cap" id="a4">
+            <div class="card-body" style="text-align: center;">
+              <h6 class="card-title">MEN'S DRAGON T-SHIRT</h6>
+              <h6>$30.00</h6>
+              <ul style="padding-left: 0px;" >
+                <li style="display: inline;" onclick="shirt8()"><i class="fa fa-circle" aria-hidden="true" style='color:#808080'></i></li>
+                <li style="display: inline;" onclick="shirt88()"><i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group" style="padding-right: 30px;padding-left: 30px;">
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="/static/mens_shirt/shirt 9.webp" alt="Card image cap" id="a5">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S FALCON HEAVY T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <ul style="padding-left: 0px;" >
+                <li style="display: inline;" onclick="shirt9()"><i class="fa fa-circle" aria-hidden="true" style='color:#36454f'></i></li>
+                <li style="display: inline;" onclick="shirt99()"><i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="/static/mens_shirt/shirt 10.webp" alt="Card image cap" id="a6">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S F9 T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <ul style="padding-left: 0px;" >
+                <li style="display: inline;" onclick="shirt10()"><i class="fa fa-circle" aria-hidden="true" style='color:#000000'></i></li>
+                <li style="display: inline;" onclick="shirt1010()"><i class="fa fa-circle" aria-hidden="true" style='color: #36454f'></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="/static/mens_shirt/shirt 11.webp" alt="Card image cap" id="a7">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S NUKE MARS T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <ul style="padding-left: 0px;" >
+                <li style="display: inline;" onclick="shirt11()"><i class="fa fa-circle" aria-hidden="true" style='color:#000000'></i></li>
+                <li style="display: inline;" onclick="shirt1111()"><i class="fa fa-circle" aria-hidden="true" style='color: #36454f'></i></li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+            <img class="card-img-top" src="{% static 'mens_shirt/shirt 12.webp' %}" alt="Card image cap">
+            <div class="card-body" style="text-align: center;">
+              <h6 class="card-title">MEN'S DRAGON LONG SLEEVE T-SHIRT</h6>
+              <h6>$35.00</h6>
+              <i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-group" style="padding-right: 30px;padding-left: 30px;">
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="{% static 'mens_shirt/shirt 13.webp' %}" alt="Card image cap">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S F9 LONG SLEEVE T-SHIRT</h6>
+            <h6>$30.00</h6>
+            <i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="{% static 'mens_shirt/shirt 14.webp' %}" alt="Card image cap">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title" style="font-size: 15px;">MEN'S FALCON HEAVY LONG SLEEVE T-SHIRT</h6>
+            <h6>$35.00</h6>
+            <i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+          <img class="card-img-top" src="{% static 'mens_shirt/shirt 15.webp' %}" alt="Card image cap">
+          <div class="card-body" style="text-align: center;">
+            <h6 class="card-title">MEN'S SPACEX POLO</h6>
+            <h6>$40.00</h6>
+            <i class="fa fa-circle" aria-hidden="true" style='color: #000000'></i>
+          </div>
+        </div>
+        <div class="card" style="margin: 10px; border: none;">
+    
+        </div>
+    </div>
+
+
+{% endblock body %}

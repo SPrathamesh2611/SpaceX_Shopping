@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% block title %}MEN'S SHIRTS{% endblock title %}
+{% load static %}
+{% block body%}
+
+    <div class="wrapper" style="margin-top: 65px;" >
+        
+        <div class="main" >
+            <img src="/static/shirt1/shirt1.webp" alt="">
+            <img src="/static/shirt1/shirt2.webp" alt="">
+            <img src="/static/shirt1/shirt3.webp" alt=""><br><hr style="margin: 15px;">
+            <div style="margin: 15px; ">
+                <div style="font-size:x-large;">SIZE CHART :-</div>
+            </div>
+            <table id="tbl" style="margin: 15px; width: 95%;" >
+                <tr>
+                    <th>SIZE</th>
+                    <td>S</td>
+                    <td>M</td>
+                    <td>L</td>
+                    <td>XL</td>
+                    <td>2X</td>
+                    <td>3X</td>
+                    <td>4X</td>
+                    <td>5X</td>
+                </tr>
+                <tr>
+                    <th>LENGTH</th>
+                    <td>28"</td>
+                    <td>29"</td>
+                    <td>30"</td>
+                    <td>31"</td>
+                    <td>32"</td>
+                    <td>33"</td>
+                    <td>34"</td>
+                    <td>35"</td>
+                </tr>
+                <tr>
+                    <th>WIDTH</th>
+                    <td>19"</td>
+                    <td>20.5"</td>
+                    <td>22"</td>
+                    <td>24"</td>
+                    <td>26"</td>
+                    <td>28"</td>
+                    <td>30"</td>
+                    <td>32"</td>
+                </tr>
+            </table>
+           
+            
+            <hr style="margin: 15px;">
+        </div>
+        <div class="sidebar2">
+            <h4>UNISEX RAPTOR SCHEMATIC T-SHIRT</h4>
+            <h5>$30.00</h5>
+            <hr style="padding: 3px;">
+            <span style="font-weight: 600;">Fabric Content:</span><br><br>
+            <span style="font-weight: 300;">Military Green</span><br>
+            <span style="font-weight: 300;">• Small-4X: 60% Cotton / 40% Polyester</span><br><br><br>
+            <span style="font-weight: 300;">Color: Military Green</span>
+            <ul style="padding-left: 2px;">
+                <li style="display: block;"><i class="fa fa-circle fa-lg" aria-hidden="true"  style="color: #8d8362;"></i></li>
+            </ul>
+            <br>
+            <div id="form">
+                <form action="/shirt1" method="post">
+                    {% csrf_token %}
+                    <span style="font-weight: 300;">Size</span><br>
+                    <select name="size" id="size" style="margin-top: 5px;width: 390px;height: 55px;color: #c1c1c1; padding-left: 15px;">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="2X">2X</option>
+                        <option value="3X">3X</option>
+                        <option value="4X">4X</option>
+                    </select><br>
+                    <br>
+                    <span style="font-weight: 300;">Quantity:</span><br>
+                    
+                    <div id="Quantity">
+                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                        <input type="number" id="number" name="number" value="0" />
+                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                    </div>
+                    <br>
+                    <button id="button" class="text" type="submit" >ADD TO CART</button>
+                    {% for message in messages  %}
+                        <h6 style="padding-top: 5px;">{{message.message}}</h6>
+                    {% endfor %}
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div>
+            <h4 style="text-align: center;padding-top: 40px;padding-bottom: 40px;">YOU MAY ALSO LIKE</h4>
+        </div>
+        <div>
+            <div class="card-group" style="padding-right: 30px;padding-left: 30px;">
+                <div class="card" style="margin: 10px; border: none;">
+                    <a href="">
+                        <img class="card-img-top" src="{% static 'mens_shirt/shirt 1.webp' %}" alt="Card image cap" >
+                    </a>
+                  <div class="card-body" style="text-align: center;">
+                    <h6 class="card-title">UNISEX RAPTOR SCHEMATIC T-SHIRT</h6>
+                    <h6>$30.00</h6>                    
+                  </div>
+                </div>
+                <div class="card" style="margin: 10px; border: none;">
+                  <img class="card-img-top" src="{% static 'mens_shirt/shirt 2.webp' %}" alt="Card image cap">
+                  <div class="card-body" style="text-align: center;">
+                    <h6 class="card-title">UNISEX STARSHIP SCHEMATIC T-SHIRT</h6>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="card" style="margin: 10px; border: none;">
+                  <img class="card-img-top" src="/static/mens_shirt/shirt 3.webp" alt="Card image cap" id="a1">
+                  <div class="card-body" style="text-align: center;">
+                    <h6 class="card-title">MEN'S SPACEX T-SHIRT</h6>
+                    <h6>$30.00</h6>
+                  </div>
+                </div>
+                <div class="card" style="margin: 10px; border: none;">
+                    <img class="card-img-top" src="{% static 'mens_shirt/shirt 4.webp' %}" alt="Card image cap">
+                    <div class="card-body" style="text-align: center;">
+                      <h6 class="card-title">MEN'S OCCUPY MARS T-SHIRT</h6>
+                      <h6>$30.00</h6>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+
+    
+   
+
+    <style>
+        .wrapper {
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .sidebar1 li{
+            display: block;
+        }
+
+        
+
+        .main img{
+            margin: 15px;
+            border: 1px solid rgb(33, 29, 29);
+            width: 775px;
+        }
+
+        .main {
+        width: 1400px;
+        margin: 15px;
+        margin-left: 50px;
+        
+        }
+
+        .sidebar2{
+        margin: 15px;
+        position: -webkit-sticky;
+        position: sticky;
+        width: 1000px;
+        top: 0;
+        padding-top: 15px;
+        height: 620px;
+        }
+        #Quantity{
+            border: 0.1px solid #c1c1c1;
+            width: 153px;
+        }    
+
+        .value-button {
+        display: inline-block;
+        margin: 0px;
+        width: 55px;
+        height: 45px;
+        text-align: center;
+        vertical-align: middle;
+        padding: 11px 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        .value-button:hover {
+        cursor: pointer;
+        }
+
+        form #decrease {
+        margin-right: -4px;
+        
+        }
+
+        form #increase {
+        margin-left: -4px;
+        
+        }
+
+        form #input-wrap {
+        margin: 0px;
+        padding: 0px;
+        }
+
+        input#number {
+        text-align: center;
+        border: none;
+        margin: 0px;
+        width: 40px;
+        height: 40px;
+        padding-top: 5px;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #button{
+            margin-left: 0px;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding-top: 0px;
+            width: 412px;
+            height: 43px;
+            display: block;
+            background: linear-gradient(to right, white 50%, black 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .5s ease-out;
+        }
+        #button:hover{
+            background-position: left bottom;
+        }
+        .text{
+            color:white;
+        }
+        .text:hover{
+            color: black;
+        }
+    </style>
+    <script>
+        function increaseValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById('number').value = value;
+        }
+
+        function decreaseValue() {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value < 1 ? value = 1 : '';
+        value--;
+        document.getElementById('number').value = value;
+        }
+    </script>
+{% endblock body %}

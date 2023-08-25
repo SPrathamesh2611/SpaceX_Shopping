@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block title %}Cart{% endblock title %}
+{% load static %}
+{% block link %}"{% static 'styles-login.css' %}"{% endblock link %}
+{% block body%}
+
+    <div style="display: inline-block;margin-left:145px;margin-top: 30px">
+        <span><i class="fa fa-shopping-cart fa-5x "  style="color: rgb(53, 215, 202); " aria-hidden="true"></i></span>
+    </div> 
+    <div style="display: inline-block;margin-top: 30px"> 
+        <h5 >User_Name = {{ fname }}</h5>
+        <h5 >Email = {{ gname }}</h5>
+    </div>
+    <br>
+    {% for item in det %}
+    <form action="/remove_from_cart">
+        {% csrf_token %}
+       <input type="text" name="product_id" id="product_id" value="{{ item.product_id }}" >
+    <table  style="border: 1px solid black;width:80%; margin-left: auto;margin-right: auto;">
+        <tr style="border: 1px solid black; text-align: center;">
+            <th style="text-align: center;">#</th>
+            <th style="text-align: center;">ITEM</th>
+            <th style="text-align: center;">ITEM NAME</th>
+            <th style="text-align: center;">SIZE</th>
+            <th style="text-align: center;">QTY</th>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center;">{{ forloop.counter }}</td>
+            <td style="text-align: center;"><img src="{{ item.photo }}" alt="" style="height: 130px; width: 130px;"></td>
+            <td style="text-align: center; width: 700px;">{{ item.name }}</td>
+            <td style="text-align: center;">{{ item.size }}</td>
+            <td style="text-align: center;width: 200px;">{{ item.quantity }}</td>
+            <td><button type="submit" >remove</button></td>
+        </tr>
+    </table>
+    </form>
+    <br>
+    
+    {% endfor %}
+    <hr style="width:80%; margin-left: auto;margin-right: auto;">
+    <div>
+        <button id="button" class="text" style="margin-left: 960px;">Place Order</button>
+    </div>
+    <br><br>
+
+    <style>
+        #button{
+            margin-left: 0px;
+            border: 1px solid black;
+            border-radius: 3px;
+            padding-top: 0px;
+            width: 412px;
+            height: 43px;
+            display: block;
+            background: linear-gradient(to right, white 50%, black 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .5s ease-out;
+        }
+        #button:hover{
+            background-position: left bottom;
+        }
+        .text{
+            color:white;
+        }
+        .text:hover{
+            color: black;
+        }
+    </style>
+{% endblock body %}
